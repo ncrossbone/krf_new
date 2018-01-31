@@ -1,0 +1,11 @@
+[{
+			"EXT_DATA_ID": "OBS_WQ_STR_EV",
+			"TITLE": "하천수",
+			"CHECKED": "false",
+			"EVENT_TYPE": "Point",
+			"DATA_LAYER_ID": 5,
+			"ORIGIN_LAYER_ID": null,
+			"PE_LAYER_ID": 6,
+			"LE_LAYER_ID": 7,
+			"AE_LAYER_ID": 8
+	}]

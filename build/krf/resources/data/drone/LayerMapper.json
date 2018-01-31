@@ -1,0 +1,760 @@
+﻿{
+	area: [{
+		"areaName": "낙동강",
+		"areaValue": "R02"
+	}, {
+		"areaName": "북한강",
+		"areaValue": "R01_1"
+	}, {
+		"areaName": "한강하류",
+		"areaValue": "R01_2"
+	}, {
+		"areaName": "금강",
+		"areaValue": "R04"
+	}, {
+		"areaName": "영산강",
+		"areaValue": "R05"			
+	}],
+	R01_1: [{
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "0",		 // 항공영상 레이어 아이디
+		"DroneDate": "2015-07-03",	 // 항공영상 레이어 일자
+		"MeasureDate": "2015-07-1주", // 측정지점 측정 일자
+		"ChlaLayerId": "6",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2015-07-03",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "",		 // 피코시안 레이어 아이디
+		"PhyDate": ""		 // 피코시안 레이어 일자
+	},{
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "1",		 // 항공영상 레이어 아이디
+		"DroneDate": "2015-07-10",	 // 항공영상 레이어 일자
+		"MeasureDate": "2015-07-2주", // 측정지점 측정 일자
+		"ChlaLayerId": "0",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2015-07-10",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "",		 // 피코시안 레이어 아이디
+		"PhyDate": ""		 // 피코시안 레이어 일자
+	}, {
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "2",		 // 항공영상 레이어 아이디
+		"DroneDate": "2015-08-11",	 // 항공영상 레이어 일자
+		"MeasureDate": "2015-08-2주", // 측정지점 측정 일자
+		"ChlaLayerId": "8",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2015-08-11",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "",		 // 피코시안 레이어 아이디
+		"PhyDate": ""		 // 피코시안 레이어 일자
+	}, {
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "3",		 // 항공영상 레이어 아이디
+		"DroneDate": "2015-08-17",	 // 항공영상 레이어 일자
+		"MeasureDate": "2015-08-3주", // 측정지점 측정 일자
+		"ChlaLayerId": "10",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2015-08-17",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "",		 // 피코시안 레이어 아이디
+		"PhyDate": ""		 // 피코시안 레이어 일자
+	}, {
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "4",		 // 항공영상 레이어 아이디
+		"DroneDate": "2015-08-24",	 // 항공영상 레이어 일자
+		"MeasureDate": "2015-08-4주", // 측정지점 측정 일자
+		"ChlaLayerId": "12",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2015-08-24",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "",		 // 피코시안 레이어 아이디
+		"PhyDate": ""		 // 피코시안 레이어 일자
+	}, {
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "6",		 // 항공영상 레이어 아이디
+		"DroneDate": "2015-09-17",	 // 항공영상 레이어 일자
+		"MeasureDate": "2015-09-3주", // 측정지점 측정 일자
+		"ChlaLayerId": "14",		 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2015-09-17",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "",		 // 피코시안 레이어 아이디
+		"PhyDate": ""		 // 피코시안 레이어 일자
+	}, {
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "7",		 // 항공영상 레이어 아이디
+		"DroneDate": "2016-06-10",	 // 항공영상 레이어 일자
+		"MeasureDate": "2016-06-2주", // 측정지점 측정 일자
+		"ChlaLayerId": "16",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2016-06-10",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "32",		 // 피코시안 레이어 아이디
+		"PhyDate": "2016-06-10"		 // 피코시안 레이어 일자
+	}, {
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "8",		 // 항공영상 레이어 아이디
+		"DroneDate": "2016-10-11",	 // 항공영상 레이어 일자
+		"MeasureDate": "2016-10-2주", // 측정지점 측정 일자
+		"ChlaLayerId": "18",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2016-10-11",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "26",		 // 피코시안 레이어 아이디
+		"PhyDate": "2016-10-11"		 // 피코시안 레이어 일자
+	}, {
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "9",		 // 항공영상 레이어 아이디
+		"DroneDate": "2016-10-19",	 // 항공영상 레이어 일자
+		"MeasureDate": "2016-10-3주", // 측정지점 측정 일자
+		"ChlaLayerId": "20",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2016-10-19",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "28",		 // 피코시안 레이어 아이디
+		"PhyDate": "2016-10-19"		 // 피코시안 레이어 일자
+	}],
+	R01_2: [{
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "10",		 // 항공영상 레이어 아이디
+		"DroneDate": "2015-09-04",	 // 항공영상 레이어 일자
+		"MeasureDate": "2015-09-1주", // 측정지점 측정 일자
+		"ChlaLayerId": "22",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2015-09-04",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "",		 // 피코시안 레이어 아이디
+		"PhyDate": ""		 // 피코시안 레이어 일자
+	}, {
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "11",		 // 항공영상 레이어 아이디
+		"DroneDate": "2015-09-15",	 // 항공영상 레이어 일자
+		"MeasureDate": "2015-09-3주", // 측정지점 측정 일자
+		"ChlaLayerId": "24",		 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2015-09-15",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "",		 // 피코시안 레이어 아이디
+		"PhyDate": ""		 // 피코시안 레이어 일자
+	}, {
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "12",		 // 항공영상 레이어 아이디
+		"DroneDate": "2015-09-22",	 // 항공영상 레이어 일자
+		"MeasureDate": "2015-09-4주", // 측정지점 측정 일자
+		"ChlaLayerId": "26",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2015-09-22",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "",		 // 피코시안 레이어 아이디
+		"PhyDate": ""		 // 피코시안 레이어 일자
+	}, {
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "13",		 // 항공영상 레이어 아이디
+		"DroneDate": "2015-10-07",	 // 항공영상 레이어 일자
+		"MeasureDate": "2015-10-2주", // 측정지점 측정 일자
+		"ChlaLayerId": "28",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2015-10-07",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "",		 // 피코시안 레이어 아이디
+		"PhyDate": ""		 // 피코시안 레이어 일자
+	}, {
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "14",		 // 항공영상 레이어 아이디
+		"DroneDate": "2016-08-19",	 // 항공영상 레이어 일자
+		"MeasureDate": "2016-08-3주", // 측정지점 측정 일자
+		"ChlaLayerId": "30",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2016-08-19",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "16",		 // 피코시안 레이어 아이디
+		"PhyDate": "2016-08-19"		 // 피코시안 레이어 일자
+	}],
+	R02: [{
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "26",		 // 항공영상 레이어 아이디
+		"DroneDate": "2015-07-04",	 // 항공영상 레이어 일자
+		"MeasureDate": "2015-07-2주", // 측정지점 측정 일자
+		"ChlaLayerId": "46",		 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2015-07-04",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "",		 // 피코시안 레이어 아이디
+		"PhyDate": ""		 // 피코시안 레이어 일자
+	},{
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "27",		 // 항공영상 레이어 아이디
+		"DroneDate": "2015-08-14",	 // 항공영상 레이어 일자
+		"MeasureDate": "2015-08-3주", // 측정지점 측정 일자
+		"ChlaLayerId": "2",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2015-08-14",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "",		 // 피코시안 레이어 아이디
+		"PhyDate": ""		 // 피코시안 레이어 일자
+	}, {
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "28",		 // 항공영상 레이어 아이디
+		"DroneDate": "2015-09-08",	 // 항공영상 레이어 일자
+		"MeasureDate": "2015-09-2주", // 측정지점 측정 일자
+		"ChlaLayerId": "48",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2015-09-08",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "",		 // 피코시안 레이어 아이디
+		"PhyDate": ""		 // 피코시안 레이어 일자
+	}, {
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "29",		 // 항공영상 레이어 아이디
+		"DroneDate": "2015-10-06",	 // 항공영상 레이어 일자
+		"MeasureDate": "2015-10-1주", // 측정지점 측정 일자
+		"ChlaLayerId": "50",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2015-10-06",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "",		 // 피코시안 레이어 아이디
+		"PhyDate": ""		 // 피코시안 레이어 일자
+	}, {//
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "30",		 // 항공영상 레이어 아이디
+		"DroneDate": "2016-06-02",	 // 항공영상 레이어 일자
+		"MeasureDate": "2016-06-1주", // 측정지점 측정 일자
+		"ChlaLayerId": "52",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2016-06-02",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "0",		 // 피코시안 레이어 아이디
+		"PhyDate": "2016-06-02"		 // 피코시안 레이어 일자
+	}, {//
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "31",		 // 항공영상 레이어 아이디
+		"DroneDate": "2016-06-17",	 // 항공영상 레이어 일자
+		"MeasureDate": "2016-06-3주", // 측정지점 측정 일자
+		"ChlaLayerId": "54",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2016-06-17",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "2",		 // 피코시안 레이어 아이디
+		"PhyDate": "2016-06-17"		 // 피코시안 레이어 일자
+	}, {//
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "32",		 // 항공영상 레이어 아이디
+		"DroneDate": "2016-08-11",	 // 항공영상 레이어 일자
+		"MeasureDate": "2016-08-2주", // 측정지점 측정 일자
+		"ChlaLayerId": "56",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2016-08-11",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "4",		 // 피코시안 레이어 아이디
+		"PhyDate": "2016-08-11"		 // 피코시안 레이어 일자
+	}, {	
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "33",		 // 항공영상 레이어 아이디
+		"DroneDate": "2016-08-25",	 // 항공영상 레이어 일자
+		"MeasureDate": "2016-08-4주", // 측정지점 측정 일자
+		"ChlaLayerId": "58",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2016-08-25",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "6",		 // 피코시안 레이어 아이디
+		"PhyDate": "2016-08-25"		 // 피코시안 레이어 일자
+    },{
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "34",		 // 항공영상 레이어 아이디
+		"DroneDate": "2016-09-08",	 // 항공영상 레이어 일자
+		"MeasureDate": "2016-09-2주", // 측정지점 측정 일자
+		"ChlaLayerId": "60",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2016-09-08",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "8",		 // 피코시안 레이어 아이디
+		"PhyDate": "2016-09-08"		 // 피코시안 레이어 일자
+	},{
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "35",		 // 항공영상 레이어 아이디
+		"DroneDate": "2016-09-23",	 // 항공영상 레이어 일자
+		"MeasureDate": "2016-09-4주", // 측정지점 측정 일자
+		"ChlaLayerId": "62",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2016-09-23",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "10",		 // 피코시안 레이어 아이디
+		"PhyDate": "2016-09-23"		 // 피코시안 레이어 일자
+	},{
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "39",		 // 항공영상 레이어 아이디
+		"DroneDate": "2017-06-05",	 // 항공영상 레이어 일자
+		"MeasureDate": "2017-06-1주", // 측정지점 측정 일자
+		"ChlaLayerId": "68",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2017-06-05",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "34",		 // 피코시안 레이어 아이디
+		"PhyDate": "2017-06-05"		 // 피코시안 레이어 일자
+	},{
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "42",		 // 항공영상 레이어 아이디
+		"DroneDate": "2017-08-12",	 // 항공영상 레이어 일자
+		"MeasureDate": "2017-08-2주", // 측정지점 측정 일자
+		"ChlaLayerId": "74",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2017-08-12",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "40",		 // 피코시안 레이어 아이디
+		"PhyDate": "2017-08-12"		 // 피코시안 레이어 일자
+	}, {
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "47",		 // 항공영상 레이어 아이디
+		"DroneDate": "2017-09-13",	 // 항공영상 레이어 일자
+		"MeasureDate": "2017-09-3주", // 측정지점 측정 일자
+		"ChlaLayerId": "84",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2017-09-13",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "50",		 // 피코시안 레이어 아이디
+		"PhyDate": "2017-09-13"		 // 피코시안 레이어 일자
+	}, {
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "48",		 // 항공영상 레이어 아이디
+		"DroneDate": "2017-09-14",	 // 항공영상 레이어 일자
+		"MeasureDate": "2017-08-3주_1", // 측정지점 측정 일자
+		"ChlaLayerId": "86",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2017-09-14",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "52",		 // 피코시안 레이어 아이디
+		"PhyDate": "2017-09-14"		 // 피코시안 레이어 일자
+	}, {
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "50",		 // 항공영상 레이어 아이디
+		"DroneDate": "2017-09-18",	 // 항공영상 레이어 일자
+		"MeasureDate": "2017-09-4주", // 측정지점 측정 일자
+		"ChlaLayerId": "90",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2017-09-18",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "56",		 // 피코시안 레이어 아이디
+		"PhyDate": "2017-09-18"		 // 피코시안 레이어 일자
+	}, {
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "51",		 // 항공영상 레이어 아이디
+		"DroneDate": "2017-09-19",	 // 항공영상 레이어 일자
+		"MeasureDate": "2017-08-4주_1", // 측정지점 측정 일자
+		"ChlaLayerId": "92",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2017-09-19",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "58",		 // 피코시안 레이어 아이디
+		"PhyDate": "2017-09-19"		 // 피코시안 레이어 일자
+	}, {
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "54",		 // 항공영상 레이어 아이디
+		"DroneDate": "2017-09-25",	 // 항공영상 레이어 일자
+		"MeasureDate": "2017-09-5주", // 측정지점 측정 일자
+		"ChlaLayerId": "98",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2017-09-25",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "64",		 // 피코시안 레이어 아이디
+		"PhyDate": "2017-09-25"		 // 피코시안 레이어 일자
+	}, {
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "55",		 // 항공영상 레이어 아이디
+		"DroneDate": "2017-10-21",	 // 항공영상 레이어 일자
+		"MeasureDate": "2017-10-4주", // 측정지점 측정 일자
+		"ChlaLayerId": "100",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2017-10-21",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "66",		 // 피코시안 레이어 아이디
+		"PhyDate": "2017-10-21"		 // 피코시안 레이어 일자
+	}],
+	R04: [{
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "16",		 // 항공영상 레이어 아이디
+		"DroneDate": "2015-08-18",	 // 항공영상 레이어 일자
+		"MeasureDate": "2015-08-2주", // 측정지점 측정 일자
+		"ChlaLayerId": "4",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2015-08-18",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "",		 // 피코시안 레이어 아이디
+		"PhyDate": ""		 // 피코시안 레이어 일자
+	},{
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "18",		 // 항공영상 레이어 아이디
+		"DroneDate": "2015-09-21",	 // 항공영상 레이어 일자
+		"MeasureDate": "2015-09-3주", // 측정지점 측정 일자
+		"ChlaLayerId": "32",		 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2015-09-21",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "",		 // 피코시안 레이어 아이디
+		"PhyDate": ""		 // 피코시안 레이어 일자
+	},{
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "19",		 // 항공영상 레이어 아이디
+		"DroneDate": "2016-08-05",	 // 항공영상 레이어 일자
+		"MeasureDate": "2016-08-1주", // 측정지점 측정 일자
+		"ChlaLayerId": "34",		 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2016-08-05",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "20",		 // 피코시안 레이어 아이디
+		"PhyDate": "2016-08-05"		 // 피코시안 레이어 일자
+	}, {
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "20",		 // 항공영상 레이어 아이디
+		"DroneDate": "2016-08-12",	 // 항공영상 레이어 일자
+		"MeasureDate": "2016-08-2주", // 측정지점 측정 일자
+		"ChlaLayerId": "36",		 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2016-08-12",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "18",		 // 피코시안 레이어 아이디
+		"PhyDate": "2016-08-12"		 // 피코시안 레이어 일자
+	}, {		
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "21",		 // 항공영상 레이어 아이디
+		"DroneDate": "2016-08-24",	 // 항공영상 레이어 일자
+		"MeasureDate": "2016-08-4주", // 측정지점 측정 일자
+		"ChlaLayerId": "38",		 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2016-08-24",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "14",		 // 피코시안 레이어 아이디
+		"PhyDate": "2016-08-24"		 // 피코시안 레이어 일자
+	}, {		
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "22",		 // 항공영상 레이어 아이디
+		"DroneDate": "2016-09-20",	 // 항공영상 레이어 일자
+		"MeasureDate": "2016-09-4주", // 측정지점 측정 일자
+		"ChlaLayerId": "40",		 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2016-09-20",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "12",		 // 피코시안 레이어 아이디
+		"PhyDate": "2016-09-20"		 // 피코시안 레이어 일자
+	}, {		
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "23",		 // 항공영상 레이어 아이디
+		"DroneDate": "2016-10-06",	 // 항공영상 레이어 일자
+		"MeasureDate": "2016-10-1주", // 측정지점 측정 일자
+		"ChlaLayerId": "42",		 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2016-10-06",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "24",		 // 피코시안 레이어 아이디
+		"PhyDate": "2016-10-06"		 // 피코시안 레이어 일자
+	}, {		
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "24",		 // 항공영상 레이어 아이디
+		"DroneDate": "2016-10-14",	 // 항공영상 레이어 일자
+		"MeasureDate": "2016-10-2주", // 측정지점 측정 일자
+		"ChlaLayerId": "44",		 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2016-10-14",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "30",		 // 피코시안 레이어 아이디
+		"PhyDate": "2016-10-14"		 // 피코시안 레이어 일자
+	}, {		
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "44",		 // 항공영상 레이어 아이디
+		"DroneDate": "2017-09-01",	 // 항공영상 레이어 일자
+		"MeasureDate": "2017-09-1주", // 측정지점 측정 일자
+		"ChlaLayerId": "78",		 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2017-09-01",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "44",		 // 피코시안 레이어 아이디
+		"PhyDate": "2017-09-01"		 // 피코시안 레이어 일자
+	}, {
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "49",		 // 항공영상 레이어 아이디
+		"DroneDate": "2017-09-15",	 // 항공영상 레이어 일자
+		"MeasureDate": "2017-08-3주_2", // 측정지점 측정 일자
+		"ChlaLayerId": "88",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2017-09-15",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "54",		 // 피코시안 레이어 아이디
+		"PhyDate": "2017-09-15"		 // 피코시안 레이어 일자
+	}, {
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "53",		 // 항공영상 레이어 아이디
+		"DroneDate": "2017-09-22",	 // 항공영상 레이어 일자
+		"MeasureDate": "2017-08-4주", // 측정지점 측정 일자
+		"ChlaLayerId": "96",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2017-09-22",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "62",		 // 피코시안 레이어 아이디
+		"PhyDate": "2017-09-22"		 // 피코시안 레이어 일자
+	}, {
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "56",		 // 항공영상 레이어 아이디
+		"DroneDate": "2017-10-25",	 // 항공영상 레이어 일자
+		"MeasureDate": "2017-10-4주", // 측정지점 측정 일자
+		"ChlaLayerId": "102",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2017-10-25",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "68",		 // 피코시안 레이어 아이디
+		"PhyDate": "2017-10-25"		 // 피코시안 레이어 일자
+	}, {
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "57",		 // 항공영상 레이어 아이디
+		"DroneDate": "2017-10-28",	 // 항공영상 레이어 일자
+		"MeasureDate": "2017-10-5주", // 측정지점 측정 일자
+		"ChlaLayerId": "104",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2017-10-28",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "70",		 // 피코시안 레이어 아이디
+		"PhyDate": "2017-10-28"		 // 피코시안 레이어 일자
+	}],
+	
+	R05: [{
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "37",		 // 항공영상 레이어 아이디
+		"DroneDate": "2016-09-13",	 // 항공영상 레이어 일자
+		"MeasureDate": "2016-09-3주", // 측정지점 측정 일자
+		"ChlaLayerId": "64",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2016-09-13",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "",		 // 피코시안 레이어 아이디
+		"PhyDate": ""		 // 피코시안 레이어 일자
+	}, {		
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "38",		 // 항공영상 레이어 아이디
+		"DroneDate": "2016-09-21",	 // 항공영상 레이어 일자
+		"MeasureDate": "2016-09-4주", // 측정지점 측정 일자
+		"ChlaLayerId": "66",		 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2016-09-21",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "",		 // 피코시안 레이어 아이디
+		"PhyDate": ""		 // 피코시안 레이어 일자
+	}, {
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "40",		 // 항공영상 레이어 아이디
+		"DroneDate": "2017-07-27",	 // 항공영상 레이어 일자
+		"MeasureDate": "2017-07-4주", // 측정지점 측정 일자
+		"ChlaLayerId": "70",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2017-07-27",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "36",		 // 피코시안 레이어 아이디
+		"PhyDate": "2017-07-27"		 // 피코시안 레이어 일자
+	}, {
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "41",		 // 항공영상 레이어 아이디
+		"DroneDate": "2017-08-04",	 // 항공영상 레이어 일자
+		"MeasureDate": "2017-08-1주", // 측정지점 측정 일자
+		"ChlaLayerId": "72",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2017-08-04",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "38",		 // 피코시안 레이어 아이디
+		"PhyDate": "2017-08-04"		 // 피코시안 레이어 일자
+	}, {
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "45",		 // 항공영상 레이어 아이디
+		"DroneDate": "2017-09-02",	 // 항공영상 레이어 일자
+		"MeasureDate": "2017-09-1주", // 측정지점 측정 일자
+		"ChlaLayerId": "80",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2017-09-02",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "46",		 // 피코시안 레이어 아이디
+		"PhyDate": "2017-09-02"		 // 피코시안 레이어 일자
+	}, {
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "46",		 // 항공영상 레이어 아이디
+		"DroneDate": "2017-09-03",	 // 항공영상 레이어 일자
+		"MeasureDate": "2017-09-1주_1", // 측정지점 측정 일자
+		"ChlaLayerId": "82",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2017-09-03",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "48",		 // 피코시안 레이어 아이디
+		"PhyDate": "2017-09-03"		 // 피코시안 레이어 일자
+	}, {
+		"layerOnOff": "off",		 // 레이어 On/Off 여부
+		"layerSymbolImg": "",		 // 레이어 심볼 이미지
+		"layerOnChkImg": "",		 // 레이어 On 체크박스 이미지
+		"layerOffChkImg": "",		 // 레이어 Off 체크박스 이미지
+		"DroneLayerId": "52",		 // 항공영상 레이어 아이디
+		"DroneDate": "2017-09-21",	 // 항공영상 레이어 일자
+		"MeasureDate": "2017-08-4주", // 측정지점 측정 일자
+		"ChlaLayerId": "94",			 // 클로로필a 초분광영상 레이어 아이디
+		"ChlaDate": "2017-09-21",		 // 클로로필a 초분광영상 레이어 일자
+		"PhyLayerId": "60",		 // 피코시안 레이어 아이디
+		"PhyDate": "2017-09-21"		 // 피코시안 레이어 일자
+	}],
+		
+	
+	layer: [{
+		"layerId": ["6", "7", "8", "9"],
+		"layerName": "행정경계",
+		"layerOnOff": "off",
+		"image1": "<img src='./resources/images/drone/chk_off.png' style='vertical-align: middle; margin-bottom: 0.25em;' />",
+		"image2": "<img src='./resources/images/drone/layer_icon_01.png' style='vertical-align: middle; margin-bottom: 0.25em;' />",
+		"visible": "false"
+	}, {
+		"id" : "reachLine",
+		"layerId": ["54", "55"],
+		"layerName": "리치라인",
+		"layerOnOff": "off",
+		"image1": "<img src='./resources/images/drone/chk_off.png' style='vertical-align: middle; margin-bottom: 0.25em;' />",
+		"image2": "&nbsp;<img src='./resources/images/button/btn_top_01_off.png' style='width: 19px; height: 19px; vertical-align: middle; margin-bottom: 0.25em;' />&nbsp;",
+		"visible": "true"
+	}, {
+		"layerId": "3",
+		"layerName": "측정지점",
+		"layerOnOff": "on",
+		"image1": "<img src='./resources/images/drone/chk_on.png' style='vertical-align: middle; margin-bottom: 0.25em;' />",
+		"image2": "<img src='./resources/images/drone/layer_icon_02.png' style='vertical-align: middle; margin-bottom: 0.25em;' />",
+		"visible": "true"
+	}, {
+		"layerId": "1",
+		"layerName": "취수장",
+		"layerOnOff": "on",
+		"image1": "<img src='./resources/images/drone/chk_on.png' style='vertical-align: middle; margin-bottom: 0.25em;' />",
+		"image2": "<img src='./resources/images/drone/layer_icon_03.png' style='vertical-align: middle; margin-bottom: 0.25em;' />",
+		"visible": "false"
+	}, {
+		"layerId": "0",
+		"layerName": "정수장",
+		"layerOnOff": "on",
+		"image1": "<img src='./resources/images/drone/chk_on.png' style='vertical-align: middle; margin-bottom: 0.25em;' />",
+		"image2": "<img src='./resources/images/drone/layer_icon_04.png' style='vertical-align: middle; margin-bottom: 0.25em;' />",
+		"visible": "false"
+	}, {
+		"id":"dronePhoto",
+		"layerId": "Drone",
+		"layerName": "항공사진",
+		"layerOnOff": "on",
+		"image1": "<img src='./resources/images/drone/chk_on.png' style='vertical-align: middle; margin-bottom: 0.25em;' />",
+		"image2": "<img src='./resources/images/drone/layer_icon_05.png' style='vertical-align: middle; margin-bottom: 0.25em;' />",
+		"visible": "true"
+	}, {
+		"id":"droneChla",
+		"layerId": "Chla",
+		"layerName": "Chl-a",
+		"layerOnOff": "on",
+		"image1": "<img src='./resources/images/drone/chk_on.png' style='vertical-align: middle; margin-bottom: 0.25em;' />",
+		"image2": "<img src='./resources/images/drone/layer_icon_06.png' style='vertical-align: middle; margin-bottom: 0.25em;' />",
+		"visible": "true"
+	}, {
+		"id":"dronePhy",
+		"layerId": "Phy",
+		"layerName": "피코시아닌",
+		"layerOnOff": "off",
+		"image1": "<img src='./resources/images/drone/chk_off.png' style='vertical-align: middle; margin-bottom: 0.25em;' />",
+		"image2": "<img src='./resources/images/drone/layer_icon_06.png' style='vertical-align: middle; margin-bottom: 0.25em;' />",
+		"visible": "true"
+	}, {
+		"layerId": "2",
+		"layerName": "대교지점",
+		"layerOnOff": "on",
+		"image1": "",
+		"image2": "",
+		"visible": "false"
+	}, {
+		"layerId": "4",
+		"layerName": "보대표지점",
+		"layerOnOff": "on",
+		"image1": "",
+		"image2": "",
+		"visible": "false"
+	}, {
+		"layerId": "5",
+		"layerName": "행정구역(법정동)",
+		"layerOnOff": "off",
+		"image1": "",
+		"image2": "",
+		"visible": "false"
+	}, {
+		"layerId": "10",
+		"layerName": "수질영향권역",
+		"layerOnOff": "on",
+		"image1": "",
+		"image2": "",
+		"visible": "false"
+	}, {
+		"layerId": "11",
+		"layerName": "대권역",
+		"layerOnOff": "on",
+		"image1": "",
+		"image2": "",
+		"visible": "false"
+	}, {
+		"layerId": "12",
+		"layerName": "중권역",
+		"layerOnOff": "on",
+		"image1": "",
+		"image2": "",
+		"visible": "false"
+	}, {
+		"layerId": "13",
+		"layerName": "소권역",
+		"layerOnOff": "on",
+		"image1": "",
+		"image2": "",
+		"visible": "false"
+	}]
+}

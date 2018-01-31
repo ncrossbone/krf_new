@@ -1,0 +1,534 @@
+<!DOCTYPE HTML>
+<html manifest="">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10, user-scalable=yes">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>New</title>
+
+    <!-- The line below must be kept intact for Sencha Cmd to build your application -->
+    <link rel="shortcut icon" href="./resources/images/mainico.ico" />
+	<link rel="stylesheet" href="./resources/css/layer.css">
+	<link rel="stylesheet" href="./resources/css/drone.css">
+	<link rel="stylesheet" href="./resources/Desktop-all.css">
+
+	<link rel="stylesheet" href="http://js.arcgis.com/3.23/esri/css/esri.css">
+	<link rel="stylesheet" href="http://js.arcgis.com/3.23/dijit/themes/claro/claro.css">
+
+	<script type="text/javascript" src="http://js.arcgis.com/3.23/"></script>
+	
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <script id="microloader" type="text/javascript" src="bootstrap.js"></script>
+
+	<!-- 공통 스크립트 -->
+	<script type="text/javascript" src="./resources/js/common.js"></script>
+	<!-- 주제도 관련 공통 스크립트 -->
+	<script type="text/javascript" src="./resources/js/commonTM.js"></script>
+	
+	<!-- KRAD 관련 공통 스크립트 -->
+	<script type="text/javascript" src="./resources/js/commonKRAD.js"></script>
+
+<style type="text/css">
+/* 처음 로딩시 window 화면 못잡음 임의적으로 height 지정 */
+#chromePop-innerCt .x-autocontainer-innerCt{ 
+	height: 335px !important;
+}
+
+
+#west_container-splitter {
+	background-color: #ede5dc !important;
+}
+
+.x-btn-icon .refreshbutton {
+	background-image: url(./resources/images/button/refresh1.jpeg)
+		!important;
+	height: 32px;
+	width: 32px;
+}
+
+.x-toolbar-default-west-khLee {
+	background: #20242f !important;
+	padding: 0px !important;
+}
+
+.x-toolbar-default-west-khLee img {
+	left: 0px !important;
+}
+
+.khLee-box-inner .x-box-inner {
+	background-image: url(./resources/images/button/top_bg.png) !important;
+	padding: 0px !important;
+}
+
+.khLee-x-north-right {
+	position: absolute !important;
+	top: 11px !important;
+	width: 267px !important;
+	left: 0px !important;
+	margin-left: 85% !important;
+}
+
+.khLee-x-north-right .x-box-inner {
+	width: 267px !important;
+}
+
+.khLee-x-north-right .x-box-target {
+	width: 267px !important;
+}
+
+.khLee-x-north-right img {
+	float: left;
+	left: 0px !important;
+	position: relative !important;
+	text-align: right !important;
+}
+
+/* .khLee-x-header .x-panel-header .x-box-inner { */
+/* 	height: 25px !important; */
+/* } */
+
+.khLee-x-header .x-panel-header-default-horizontal.x-header-noborder {
+	padding: 4px !important;
+	/*box-shadow: 0px 3px 2px #777;*/
+}
+
+.khLee-x-tab-header .x-panel-header-default-horizontal {
+	padding: 7px 4px 4px 4px !important;
+}
+
+.khLee-x-tab-header .x-box-inner {
+	height: 22px !important;
+}
+
+.khLee-x-tab-header .x-panel-default-outer-border-rbl {
+	border: 0px !important;
+}
+
+.khLee-x-serch-btn {
+	height: 19px !important;
+	width: 34px !important;
+	cursor: pointer !important;
+}
+
+.khLee-x-default-btn {
+	height: 19px !important;
+	width: 24px !important;
+	cursor: pointer !important;
+}
+
+.khLee-x-tree-node-text-bold {
+	font-weight: bold;
+	letter-spacing: -1px;
+}
+
+.khLee-x-tree-node-text-small {
+	font-size: 12px;
+	color: #0066cc;
+	text-decoration: underline;
+	letter-spacing: -1px;
+}
+
+.khLee-x-tree-node-text-small-bold {
+	font-size: 13px;
+	color: #A52A2A;
+	text-decoration: underline;
+	letter-spacing: -1px;
+}
+
+.khLee-x-tree-node-text-small-nounder {
+	font-size: 12px;
+	letter-spacing: -1px;
+}
+
+.khLee-window-panel-header .x-window-header-default-top {
+	background-image: url('./resources/images/button/pop_bg.gif') !important;
+	border-style: none !important;
+	height: 35px;
+	background-repeat: repeat-x;
+	padding: 8px 0px 0px 5px;
+}
+
+.khLee-x-window-default {
+	/*
+			border: 0px !important;
+			border-width: 0px !important;
+		*/
+	/*border-color: #999 !important;*/
+	border-style: none !important;
+}
+
+/*
+		 .x-window-body-default {
+		 background-image: url('./resources/images/button/pop_bg.gif') !important;
+		 	border-style: none !important;
+		 }
+		*/
+.khLee-x-reachtoolbar .x-box-inner {
+	border: 0px !important;
+	background: url('./resources/images/button/tool_bar_bg.gif') repeat-x
+		!important;
+}
+
+.khLee-x-reachtollbar-default .x-border-item x-box-item x-toolbar-default x-box-layout-ct
+	{
+	padding: 0px;
+}
+
+.khLee-x-button-move {
+	cursor: pointer;
+	border: 0px !important;
+	background: transparent url(./resources/images/button/btn_move.png) 0 0
+		no-repeat !important;
+	width: 55px;
+	height: 25px;
+}
+
+.khLee-x-button-search {
+	cursor: pointer;
+	border: 0px !important;
+	background: transparent url(./resources/images/button/icon_seah2.gif) 0
+		0 no-repeat !important;
+	width: 55px;
+	height: 25px;
+}
+
+.khLee-x-button-select {
+	cursor: pointer;
+	border: 0px !important;
+	background: transparent url(./resources/images/button/btn_select.gif) 0
+		0 no-repeat !important;
+	width: 122px;
+	height: 35px;
+}
+
+.khLee-x-button-reset {
+	cursor: pointer;
+	border: 0px !important;
+	background: transparent url(./resources/images/button/btn_reset.gif) 0 0
+		no-repeat !important;
+	width: 122px;
+	height: 35px;
+}
+
+/*
+		.khLee-x-box-target .x-box-target {
+			position: relative;
+		}
+		*/
+		.khLee-x-box-target .x-box-target img {
+			position: relative;
+			float: left;
+			margin: 0px;
+		}
+		
+		.khLee-x-searcharea-water .x-panel {
+			margin: 10px;
+			padding: 10px;
+			background: #f8f6f9;
+			border: 1px solid #d1d1d1;
+		}
+		
+		.khLee-x-form .x-panel-body {
+			background: #f8f6f9;
+			right: auto;
+			left: 5px;
+			top: 5px;
+			margin: 0px;
+			width: 312px;
+			height: 131px;
+		}
+		
+		.khLee-infowin-title {
+			padding: 4px 5px;
+			font-size: 12px;
+			font-weight: bold;
+			height: 24px;
+		}
+		
+		.khLee-infowin-cont {
+			font-size: 12px;
+			padding: 4px 5px;
+			border-bottom: 1px solid #999;
+			height: 25px;
+		}
+		
+		.khLee-x-column-header-text .x-column-header-text, .x-column-header {
+			color: #000 !important;
+			font-weight: bold !important;
+		}
+		
+		.khLee-x-grid-locked .x-grid-locked .x-grid-inner-locked, .x-column-header {
+			border-right: 1px dotted #c1c1c1 !important;
+		}
+		
+		.khLee-x-label-default {
+			padding-top: 2px;
+			min-height: 24px;
+			position: relative;
+		}
+		
+		.khLee-x-label-default b {
+			letter-spacing: -1px;
+			position: absolute;
+			top: 4px;
+			left: 14px;
+		
+		}
+		.khLee-x-form-item-label-default .x-form-item-label-default {
+			padding-top: 2px;
+		}
+		
+		.x-tree-icon .x-tree-icon-leaf.abc{
+		  background: url(abc) x y no-repat !important;
+		}
+		
+		.ux-custom-title-close-icon .x-tool-close {
+            background-image: url('./resources/images/button/icon_close2.gif');
+            background-position: 0 0; 
+        }
+
+        .ux-custom-title-close-icon .x-tool-over .x-tool-close {
+            background-image: url('./resources/images/button/icon_close2.gif');
+            background-position: 0 0;
+        }
+        
+        .khLee-x-grid-cell .x-grid-cell-inner-action-col{
+        	padding: 4px 4px 1px 4px !important;
+        }
+        
+        .khLee-datePanel-body1 .x-window-body .x-window-body-default{
+        	height: 25px !important;
+        }
+        
+        .khLee-datePanel-body1 .x-window .x-layer .x-window-default{
+        	height: 25px !important;
+        }
+        
+        .khLee-datePanel-body1 .x-css-shadow{
+        	height: 21px !important;
+        }
+        
+        .khLee-tab-active .x-tab-active{
+        	background-color: #c7e8ff !important;
+			color: #004677 !important;
+        	height: 33px;
+        	right: auto;
+        	left: 0px;
+        	top: 0px;
+        	margin: 0px;
+        	font-weight: bold;
+        	padding: 8px 15px;
+        	border-top-left-radius: 5px;
+        	border-top-right-radius: 5px;
+        }
+        
+        .khLee-tab-unselectable .x-tab-top{
+        	background: #c5c5c5;
+			color: #fff;
+        	height: 33px;
+        	right: auto;
+        	left: 0px;
+        	top: 0px;
+        	margin: 0px;
+        	padding: 8px 15px;
+        	border-top-left-radius: 5px;
+        	border-top-right-radius: 5px;
+        }
+        
+        .khLee-tab .x-tab{
+        	margin-right: 2px;
+        
+        }
+        .khLee-checkboxgroup-body .x-form-checkboxgroup-body table {
+        	border-top: 2px solid #2b343d;
+        }
+        
+        /*20151208-위치찾기*/
+        table.dj_result { width: 100%; border-bottom: 1px dashed #d5d5d5; } 
+        table.dj_result> tbody> tr> th { width: 25px;} 
+		table.dj_result> tbody> tr> td { font-size: 12px; color: #555; text-indent: 5px; }
+		table.dj_result> tbody> tr> td span { font-size: 12px; color: #0066FF; text-indent: 5px; text-decoration:underline; } 
+		/* table.dj_result> tbody> tr> td span { font-weight: bold; color: #000; } */ 
+		
+		
+		.dj_result_info {
+			width: 290px;	
+			margin-top: 10px;
+			margin-left: 11px;
+		}
+		
+		.dj_reach_list_title {
+			color: #555;
+		}
+		
+		.dj_reach_list_title span{
+			font-weight: bold;
+			color: #0b4a7f;
+			padding-left: 5px;
+		}
+		
+		.dj_accordion .x-accordion-item .x-accordion-hd{
+			background-color: #eef5fb;
+			border-top: 1px solid #bfd6e4;
+			border-bottom: 1px solid #bfd6e4;
+			color: #000;
+			
+		}
+		
+		.x-panel-body .x-accordion-body{
+			overflow: hidden !important;
+		}
+		
+		
+		.dj_layer_nm .x-title-text{
+			color: #000;
+		}
+		
+		
+		/* 시작위치 */
+		.dj_stextfield .x-form-trigger-wrap-default{
+		    border: 2px solid #f5bf32;
+		}
+		
+		/* 끝위치 */
+		.dj_etextfield .x-form-trigger-wrap-default{
+			border: 2px solid #3eaf0e;
+		}
+		
+		.dj_toolbarNm #reachNameToolbar-innerCt {
+			/* width: 208px !important; */
+			/* height: 31px !important; */ 
+			background: url('./resources/images/popup/txtFieldBg.png') no-repeat;
+			position: absolute;
+			left: 2px;
+		}
+		
+		#reach_close {
+   	 		top: 0px !important;
+   	 		cursor: pointer;
+        }
+		
+		/* .dj_toolbarNm #reachNameToolbar-innerCt {
+			width: 210px !important;
+			background: url('./resources/images/button/tool_bar_bg.gif') repeat-x !important;
+			position: absolute;
+			left: 2px;
+		} */
+		
+		.dj_toolbarConf {
+			border-style: none !important;
+			box-shadow: 0px 0px 0px #777;
+			width: 99px !important;
+			height: 27px !important; 
+			background: url('./resources/images/popup/confBoxBg.png') !important;
+			position: absolute;
+		}
+		
+		/* 시작위치 */
+		.dj_stoptextfield .x-form-trigger-wrap-default {
+		    border: 2px solid #f5bf32;
+		    width: 92px; 
+		    margin: 0px auto;
+		}
+		
+		.dj_spottextfield2 .x-form-item {
+			top: 3px !important;
+		}
+		
+		.dj_spottextfield2 .x-form-text-default{
+			padding: 2px 0px 1px 0px;
+			min-height: 16px;
+			text-align: center;
+			font-size: 12px;
+			
+		}
+		
+		/* 끝위치 */
+		.dj_etoptextfield .x-form-trigger-wrap-default{
+			border: 2px solid #3eaf0e;
+			width: 92px; 
+		    /*height: 22px;*/
+		    margin: 0px auto;
+		}
+		
+		#searchConfig_header{
+			border-width: 2px !important;
+		}
+		
+		
+		.dj-mask-withimg .x-mask-msg-text {
+			  padding: 21px 0 0 !important;
+			  background-image: url(./resources/images/button/loading.gif) !important;
+			  background-repeat: no-repeat !important;
+			  background-position: center 0 !important; }
+			  
+		.dj-mask-noneimg .x-mask-msg-text {
+			  padding: 0 0 0 !important;
+			  background-image: none !important;
+			  background-repeat: no-repeat !important;
+			  background-position: center 0 !important; }
+		
+		.dj-searchAreaList #searchAreaList-body{
+			/*height: 630px !important;*/
+			overflow: overlay !important;
+		}
+		
+		.x-grid-item-alt{
+			background-color: white !important;
+		}
+		
+		.x-grid-item-selected{
+			background-color: white !important;
+		}
+		
+		.pdj_subTotal{
+		    background-color: #feb24c !important;
+		}
+		
+		.pdj_total{
+		    font: bold 13px/15px helvetica,arial,verdana,sans-serif !important;
+		}
+		
+		.pdj_total_subTotal{
+			background-color: #feb24c !important;
+			font: bold 13px/15px helvetica,arial,verdana,sans-serif !important;
+		}	
+		
+		.icon_app{
+			background-image: url(./resources/images/button/btn_app.gif) !important;
+		}
+		
+		.icon_point{
+			width: 7px !important;
+			height: 11px !important;
+			background: url(./resources/images/button/guide01.png) left 4px no-repeat;
+		}
+		
+		.icon_line{
+			width: 10px !important;
+			height: 9px !important;
+			background: url(./resources/images/button/guide02.png) left 7px no-repeat;
+		}
+			
+		.pdj_kradText{
+			font-size: 12px;
+			letter-spacing: -1px;
+		}
+
+		#_mapDiv_{
+			position: inherit !important;
+		}
+	</style>
+</head>
+	<body class="drone-toolbar drone-combolist">
+		<div style="width:100%; height:100%;" id="pageloaddingDiv">
+			<div style="margin: 0; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+				<img src="/resources/images/loading_2.gif">
+			</div>
+		</div>
+	</body>
+</html>

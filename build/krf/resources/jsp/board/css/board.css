@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+
+.fullFrame { width: 100%; position: relative; clear: both; }
+.contentFrame { display: block; position: relative; margin: 0px auto; }
+
+.boardArea { width: 650px; }
+.boardArea select, input { padding: 3px 2px;  }
+.boardArea a.search { padding: 5px 10px; background: #777; color: #FFF; font-family: 'NanumGothicBlod'; font-size: 12px; }
+
+table { border-top: 3px solid #777; font-size: 14px; border-collapse: collapse; }
+table thead th { height: 39px; border-bottom: 1px solid #e6e6e6; font-family: 'NanumGothicBlod'; background: #fafafa; text-align: center; letter-spacing: -1px;}
+table thead td, tbody td { height: 39px; border-bottom: 1px solid #e6e6e6; text-align: center; color: #333; }
+table tbody td a { color: #333; letter-spacing: -1px !important;}
+
+.btnArea { text-align: center; }
+.btnArea a { border: 1px solid #d0d0d0; width: 25px; height: 20px; padding-top: 5px; font-size: 11px; display: inline-block; text-align: center; color: #3c3c3c; }
+.btnArea a:hover { border-color: #595959; }
+.btnArea a.on { background: #595959; color: #FFF; font-family: 'NanumGothicBlod'; border-color: #595959; }
+
+
+.btnArea2 { text-align: center; }
+.btnArea2 a { border: 1px solid #d0d0d0; padding: 5px 10px; font-size: 11px; display: inline-block; text-align: center; color: #3c3c3c; }
+.btnArea2 a:hover { border-color: #595959; }
+.btnArea2 a.on { background: #595959; color: #FFF; font-family: 'NanumGothicBlod'; border-color: #595959; }
+.contsWrite { width: 100%; border: 1px solid #cdcdcd; }
