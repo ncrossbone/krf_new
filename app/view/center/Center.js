@@ -39,6 +39,5 @@ Ext.define('krf_new.view.center.Center', {
         this.add(droneDetailExp);
         droneDetailExp.hide();
         droneToolbar.hide();
-        
 	}
 });

@@ -1905,8 +1905,7 @@ Ext.define("krf_new.view.map.KRADLayerAdmin", {
 						if(aeFeatures.length == 0){
 							
 							drawType = "reachArea";
-						}
-						else{
+						} else{
 							
 							drawType = "kradArea";
 							
@@ -1916,7 +1915,6 @@ Ext.define("krf_new.view.map.KRADLayerAdmin", {
 								if(fSet.features.length > 0){
 									
 									for(var i = 0; i < fSet.features.length; i++){
-										
 										// 그래픽 그리기
 										me.drawGraphic(fSet.features[i], "kradEmpty");
 									}
@@ -1927,7 +1925,6 @@ Ext.define("krf_new.view.map.KRADLayerAdmin", {
 						var features = featureSet.features; // AO 피처
 						
 						for(var i = 0; i < features.length; i++){
-							
 							// 그래픽 그리기
 							me.drawGraphic(features[i], drawType);
 						}

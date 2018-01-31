@@ -75,12 +75,7 @@ Ext.define('krf_new.view.search.ButtonPanelController', {
 	onClickLayer: function(obj, el, evt){
 		// 버튼 On/Off
 		var currCtl = SetBtnOnOff(el.id);
-		
-		if(currCtl.btnOnOff == "on"){
-			$KRF_APP.WestTabChange(0);
-		}else{
-			$KRF_APP.WestTabChange(1);
-		}
+		$KRF_APP.fireEvent($KRF_EVENT.WEST_TAB_CHANGE, currCtl.btnOnOff);
 	},
 	
 	// 정보창 클릭

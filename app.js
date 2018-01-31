@@ -78,8 +78,8 @@ var $KRF_EVENT = {
 		MINIMIZE_WINDOWS:'minimizeWindows',
 		MAP_RESIZE:'resize',
 		SET_MAP_TOOLTIP_LOCATION:'setMapTooltipLocation',
-		MOVE_COMMON:'moveCommon'
-			
+		MOVE_COMMON:'moveCommon',
+		WEST_TAB_CHANGE:'WestTabChange'
 }
 
 var $KRF_WINS = {  KRF:{   MAP:{id:'map-win'}},
@@ -129,11 +129,6 @@ Ext.application({
         $KRF_APP.addListener($KRF_EVENT.DESK_TOP_LOADED, me.desktopLoaded, me);
         $KRF_APP.addListener($KRF_EVENT.MAP_WINDOW_LOADED, me.mapWindowLoaded, me);
         $KRF_APP.addListener($KRF_EVENT.CORE_MAP_LOADED, me.coreMapLoaded, me);
-        
-        // 지점 목록 window
-        $KRF_APP.addListener($KRF_EVENT.SHOW_SITE_LIST_WINDOW, me.showSiteListWindow, me);
-        $KRF_APP.addListener($KRF_EVENT.HIDE_SITE_LIST_WINDOW, me.hideSiteListWindow, me);
-               
         // 모드 변경
         $KRF_APP.addListener($KRF_EVENT.MODE_CHANGED, me.modeChanged, me);
         
@@ -255,124 +250,5 @@ Ext.application({
     },
     getDesktopModule: function(id){
     	return desktopApp.getModule(id);
-    },
-    // 지점 목록 창 띄우기
-	showSiteListWindow: function(param) {
-		if(param == null || param.searchText == null){
-			return;
-		}
-		// 검샋시 다른 더튼값 초기화
-		var cmbArea1 = Ext.getCmp("cmbArea1");
-		var cmbArea2 = Ext.getCmp("cmbArea2");
-		var cmbArea3 = Ext.getCmp("cmbArea3");
-		var cmbWater1 = Ext.getCmp("cmbWater1");
-		var cmbWater2 = Ext.getCmp("cmbWater2");
-		var cmbWater3 = Ext.getCmp("cmbWater3");
-		var txtSearch = Ext.getCmp("textSearchText");
-		
-		var textSearchText_Start = Ext.getCmp("textSearchText_Start");
-		var textSearchText_End = Ext.getCmp("textSearchText_End");
-
-		if (param.searchText == 'waterSearch') {// 수계검색시 행정구역 초기화
-			cmbArea1.setValue("");
-			cmbArea2.setValue("");
-			cmbArea3.setValue("");
-			txtSearch.setValue("");
-
-			textSearchText_Start.setValue("");
-			textSearchText_End.setValue("");
-		} else if (param.searchText == 'admSearch') {// 행정구역검색시 수계
-			// 초기화
-			cmbWater1.setValue("");
-			cmbWater2.setValue("");
-			cmbWater3.setValue("");
-			txtSearch.setValue("");
-			textSearchText_Start.setValue("");
-			textSearchText_End.setValue("");
-		} else if (param.searchText == "nameSearch") {// 명칭찾기시 수계 행정구역
-			// 초기화
-			cmbArea1.setValue("");
-			cmbArea2.setValue("");
-			cmbArea3.setValue("");
-			cmbWater1.setValue("");
-			cmbWater2.setValue("");
-			cmbWater3.setValue("");
-			textSearchText_Start.setValue("");
-			textSearchText_End.setValue("");
-		} else if(param.searchText == "SEnameSearch"){
-			cmbArea1.setValue("");
-			cmbArea2.setValue("");
-			cmbArea3.setValue("");
-			cmbWater1.setValue("");
-			cmbWater2.setValue("");
-			cmbWater3.setValue("");
-			txtSearch.setValue("");
-		} else {
-		}
-		
-//		var desktop = this.getDesktop();
-//		
-//		var siteListModule = this.getDesktopModule($KRF_WINS.KRF.SITE_LIST.id);
-//		
-//		var siteListWindow = siteListModule.createWindow({x:desktop.getWidth()-400,y:0, width:400});
-//		siteListWindow = siteListWindow.show();
-//		
-//		this.modeWindows.krf.push(siteListWindow);
-		
-		var siteListWindow = Ext.getCmp("siteListWindow");
-		if (siteListWindow == undefined){
-			siteListWindow = Ext.create('krf_new.view.east.SiteListWindow',{x:Ext.getCmp('center_container').getWidth() - 520, y:0});
-			Ext.getCmp('center_container').add(siteListWindow);
-		}	
-    	
-    	siteListWindow.show();
-    	
-		var store = null;
-		var treeCtl = Ext.getCmp("siteListTree");
-		
-		if(param.searchType == "krad"){
-			store = Ext.create('krf_new.store.east.KradListWindow');
-		} else{
-			store = Ext.create('krf_new.store.east.SiteListWindow',{
-				async:true
-			});
-		}
-		
-		if(param.searchText == "paramSearch"){
-			store.paramType = searchType;
-		}
-		store.searchType = param.searchText;
-		store.load();
-		treeCtl.setStore(store);
-
-		// 좌측 정보창 버튼 on
-		SetBtnOnOff("btnSiteListWindow", "on");
-	},
-	hideSiteListWindow: function(currCtl) {
-
-		var listWinCtl = Ext.getCmp("siteListWindow");
-
-		if (listWinCtl != undefined)
-			listWinCtl.close();
-
-		listWinCtl = Ext.getCmp("siteListWindow_reach");
-
-		if (listWinCtl != undefined)
-			listWinCtl.close();
-		
-		// 좌측 정보창 버튼 off
-		SetBtnOnOff("btnSiteListWindow", "off");
-	},
-	WestTabChange: function(tabIdx) {
-		var westContents = Ext.getCmp("westContents");
-		westContents.setActiveItem(tabIdx);
-		
-		var searchWin = Ext.getCmp($KRF_WINS.KRF.SEARCH.id);
-		
-		if(tabIdx == 0){
-			searchWin.setTitle('주제도 선택');
-		}else{
-			searchWin.setTitle('위치검색');
-		}
-	}
+    }
 });
