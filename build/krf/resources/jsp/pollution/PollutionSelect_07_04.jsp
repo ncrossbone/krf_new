@@ -1,0 +1,166 @@
+<%@ page contentType="text/html; charset=euc-kr" pageEncoding="EUC-KR" %>
+<%@ include file="dbConn.jsp" %>
+<%@ page import="java.util.*,java.text.*"%>
+<%@page import="org.json.simple.*"%>
+<%
+/* 
+	중요!!!
+	Json 형태로 출력하는 jsp페이지는 어떠한 html 요소도 사용하지 않아야 한다.
+	<!DOCTYPE, <html 등등
+*/
+try{
+	
+	Object[] catDid = request.getParameterValues("catDid");
+	String year = request.getParameter("year");
+	
+	sql = " 	WITH TBL_PLA_LANDUSE AS (																																";
+	sql += " 	    SELECT YYYY /* 조사년도 */                                                          ";
+	sql += " 	         , WS_NM                                                                        ";
+	sql += " 	         , MB_NM                                                                        ";
+	sql += " 	         , SB_NM                                                                        ";
+	sql += " 	         , CAT_DID                                                                      ";
+	sql += " 	         , DO_NM||CTY_NM||DONG_NM||RI_NM as addr                                        ";
+	sql += " 	         , FINAL_PERCENTAGE /* 점유율 */                                                ";
+	sql += " 	         , INST_NM /* 관할기관명 */                                                     ";
+	sql += " 	         , IND_NM /* 업소명 */                                                          ";
+	sql += " 	         , IND_OWNER /* 대표자 */                                                       ";
+	sql += " 	         , IND_ID /* 사업자등록번호 */                                                  ";
+	sql += " 	         , OT_NM /* 기타수질오염원분류 */                                               ";
+	sql += " 	         , EH_NM /* 처리방법 */                                                         ";
+	sql += " 	         , WW_AMT /* 폐수방류량(㎥/일) */                                               ";
+	sql += " 	         , ADM_CD                                                                       ";
+	sql += " 	         , SB_ID                                                                        ";
+	sql += " 	      FROM PLA_OPS_TOTAL_FOR_CAT                                                        ";
+	if(catDid.length != 0){
+		sql += "        where CAT_DID IN (                                ";
+		for(int i=0;i<catDid.length;i++){
+			if(i == catDid.length-1){
+				sql += "	'"+catDid[i]+"' )			";
+			}else{
+				sql += "	'"+catDid[i]+"',			";
+			}
+			
+		}
+	}
+	sql += "  AND YYYY ='"+year+"'                                 ";
+	sql += " 	    )                                                                                   ";
+	sql += " 	select YYYY /* 조사년도 */                                                              ";
+	sql += " 	     , WS_NM                                                                            ";
+	sql += " 	     , MB_NM                                                                            ";
+	sql += " 	     , SB_NM                                                                            ";
+	sql += " 	     , CAT_DID                                                                          ";
+	sql += " 	     , ADDR                                                                             ";
+	sql += " 	     , FINAL_PERCENTAGE /* 점유율 */                                                    ";
+	sql += " 	     , INST_NM /* 관할기관명 */                                                         ";
+	sql += " 	     , IND_NM /* 업소명 */                                                              ";
+	sql += " 	     , IND_OWNER /* 대표자 */                                                           ";
+	sql += " 	     , IND_ID /* 사업자등록번호 */                                                      ";
+	sql += " 	     , OT_NM /* 기타수질오염원분류 */                                                   ";
+	sql += " 	     , EH_NM /* 처리방법 */                                                             ";
+	sql += " 	     , WW_AMT /* 폐수방류량(㎥/일) */                                                   ";
+	sql += " 	  from (                                                                                ";
+	sql += " 	        SELECT YYYY /* 조사년도 */                                                      ";
+	sql += " 	             , WS_NM                                                                    ";
+	sql += " 	             , MB_NM                                                                    ";
+	sql += " 	             , SB_NM                                                                    ";
+	sql += " 	             , CAT_DID                                                                  ";
+	sql += " 	             , addr                                                                     ";
+	sql += " 	             , FINAL_PERCENTAGE /* 점유율 */                                            ";
+	sql += " 	             , INST_NM /* 관할기관명 */                                                 ";
+	sql += " 	             , IND_NM /* 업소명 */                                                      ";
+	sql += " 	             , IND_OWNER /* 대표자 */                                                   ";
+	sql += " 	             , IND_ID /* 사업자등록번호 */                                              ";
+	sql += " 	             , OT_NM /* 기타수질오염원분류 */                                           ";
+	sql += " 	             , EH_NM /* 처리방법 */                                                     ";
+	sql += " 	             , WW_AMT /* 폐수방류량(㎥/일) */                                           ";
+	sql += " 	             , ADM_CD                                                                   ";
+	sql += " 	             , SB_ID                                                                    ";
+	sql += " 	          FROM TBL_PLA_LANDUSE                                                          ";
+	sql += " 	        union                                                                           ";
+	sql += " 	        SELECT YYYY /* 조사년도 */                                                      ";
+	sql += " 	             , WS_NM                                                                    ";
+	sql += " 	             , MB_NM                                                                    ";
+	sql += " 	             , SB_NM                                                                    ";
+	sql += " 	             , CAT_DID                                                                  ";
+	sql += " 	             , '소계' as addr                                                           ";
+	sql += " 	             , '' as FINAL_PERCENTAGE /* 점유율 */                                      ";
+	sql += " 	             , '' as INST_NM /* 관할기관명 */                                           ";
+	sql += " 	             , '' as IND_NM /* 업소명 */                                                ";
+	sql += " 	             , '' as IND_OWNER /* 대표자 */                                             ";
+	sql += " 	             , '' as IND_ID /* 사업자등록번호 */                                        ";
+	sql += " 	             , '' as OT_NM /* 기타수질오염원분류 */                                     ";
+	sql += " 	             , '' as EH_NM /* 처리방법 */                                               ";
+	sql += " 	             , sum(WW_AMT) /* 폐수방류량(㎥/일) */                                      ";
+	sql += " 	             , '' as ADM_CD                                                             ";
+	sql += " 	             , SB_ID                                                                    ";
+	sql += " 	          FROM TBL_PLA_LANDUSE                                                          ";
+	sql += " 	         GROUP BY YYYY, WS_NM, MB_NM, SB_NM, SB_ID, CAT_DID                             ";
+	sql += " 	        union                                                                           ";
+	sql += " 	        SELECT '' as YYYY /* 조사년도 */                                                ";
+	sql += " 	             , '' as WS_NM                                                              ";
+	sql += " 	             , '' as MB_NM                                                              ";
+	sql += " 	             , '' as SB_NM                                                              ";
+	sql += " 	             , '' as CAT_DID                                                            ";
+	sql += " 	             , '총계' as addr                                                           ";
+	sql += " 	             , '' as FINAL_PERCENTAGE /* 점유율 */                                      ";
+	sql += " 	             , '' as INST_NM /* 관할기관명 */                                           ";
+	sql += " 	             , '' as IND_NM /* 업소명 */                                                ";
+	sql += " 	             , '' as IND_OWNER /* 대표자 */                                             ";
+	sql += " 	             , '' as IND_ID /* 사업자등록번호 */                                        ";
+	sql += " 	             , '' as OT_NM /* 기s타수질오염원분류 */                                    ";
+	sql += " 	             , '' as EH_NM /* 처리방법 */                                               ";
+	sql += " 	             , sum(WW_AMT) /* 폐수방류량(㎥/일) */                                      ";
+	sql += " 	             , '' as ADM_CD                                                             ";
+	sql += " 	             , '' as SB_ID                                                              ";
+	sql += " 	          FROM TBL_PLA_LANDUSE                                                          ";
+	sql += " 	       )                                                                                ";
+	sql += " 	 ORDER BY DECODE(ADDR,'총계',1,2), SB_ID, CAT_DID, DECODE(ADDR,'소계',1,2), ADM_CD      ";
+	
+	
+	
+	
+	
+    
+//System.out.println(sql);
+stmt = con.createStatement();
+rs = stmt.executeQuery(sql);
+
+	JSONObject jsonObj  = new JSONObject();
+	JSONArray jsonArr = new JSONArray();
+	JSONObject jsonRecord = null;
+	
+	while(rs.next()) {
+		jsonRecord = new JSONObject();
+		
+		jsonRecord.put("YYYY",rs.getString("YYYY"));
+		jsonRecord.put("WS_NM",rs.getString("WS_NM"));
+		jsonRecord.put("MB_NM",rs.getString("MB_NM"));
+		jsonRecord.put("SB_NM",rs.getString("SB_NM"));
+		jsonRecord.put("FINAL_PERCENTAGE",rs.getString("FINAL_PERCENTAGE"));
+		jsonRecord.put("ADDR",rs.getString("ADDR"));
+		jsonRecord.put("CAT_DID",rs.getString("CAT_DID"));
+		jsonRecord.put("INST_NM",rs.getString("INST_NM"));
+		jsonRecord.put("IND_NM",rs.getString("IND_NM"));
+		jsonRecord.put("IND_OWNER",rs.getString("IND_OWNER"));
+		jsonRecord.put("IND_ID",rs.getString("IND_ID"));
+		jsonRecord.put("OT_NM",rs.getString("OT_NM"));
+		jsonRecord.put("EH_NM",rs.getString("EH_NM"));
+		jsonRecord.put("WW_AMT",rs.getString("WW_AMT"));
+		
+		
+		jsonArr.add(jsonRecord);
+		
+	}
+	
+	jsonObj.put("data", jsonArr);
+//console.info(jsonObj);
+out.print(jsonObj);
+//out.print("success");
+}catch(Exception ex){
+	//throw;
+	System.out.println(ex);
+	System.out.println(sql);
+	out.print("error");
+} 
+%>
+<%@ include file="dbClose.jsp" %>

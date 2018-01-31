@@ -1,0 +1,159 @@
+[{
+	"reachServiceUrl" : "http://112.217.167.123:20002/arcgis/rest/services/reach/MapServer", // 리치 서비스 v2
+	"reachServiceUrl_v3" : "http://112.217.167.123:20002/arcgis/rest/services/reach_V3/MapServer", // 리치 서비스 v3
+	"reachServiceUrl_v3_TM" : "http://112.217.167.123:20002/arcgis/rest/services/reach_V3_TM/MapServer", // 
+	"reachServiceUrl_v3_2" : "http://112.217.167.123:20002/arcgis/rest/services/reach_V3_2/MapServer", // 리치 서비스 v3 (투명도적용)
+	"reachServiceUrl_bak" : "http://112.217.167.123:20002/arcgis/rest/services/reach/MapServer", // 리치 서비스
+	"reachTestServiceUrl" : "http://112.217.167.123:20002/arcgis/rest/services/reach_test/MapServer", // 시연용 테스트 서비스
+	"mapServiceUrl_Rpt_Dim" : "http://112.217.167.123:20002/arcgis/rest/services/Gray_Report/MapServer", // 리포트용 Dim처리 맵 서비스 URL
+	"mapServiceUrl_Rpt_Site" : "http://112.217.167.123:20002/arcgis/rest/services/Report/MapServer", // 리포트용 맵 서비스 URL
+	"reachTestServiceUrl_bak" : "http://112.217.167.123:20002/arcgis/rest/services/reach_test/MapServer", // 시연용 테스트 서비스
+	"dimServiceUrl" : "http://112.217.167.123:20002/arcgis/rest/services/Gray/MapServer", // dim처리 서비스
+	"dimServiceUrl_bak" : "http://112.217.167.123:20002/arcgis/rest/services/Gray/MapServer", // dim처리 서비스
+	"baseMapUrl_vworld": "http://xdworld.vworld.kr:8080/2d/Base/201612/#level#/#col#/#row#.png", // 배경맵 서비스 (아래 외부, 내부, 테스트 중 택일)
+	"baseMapUrl_vworld_http": "http://xdworld.vworld.kr:8080/2d/Base/201612/#level#/#col#/#row#.png", // 배경맵 서비스 외부 (참고용)
+	"baseMapUrl_vworld_intra": "http://10.101.95.129/Base/201411/#level#/#level#/#col#/#row#.png", // 배경맵 서비스 내부 (참고용)
+	"baseMapUrl_vworld_test": "http://112.218.1.243:20080/2d/Base/201411/#level#/#level#/#col#/#row#.png", // 배경맵 서비스 테스트 서버 (참고용)
+	"baseMapUrl_vworld_old": "http://xdworld.vworld.kr:8080/2d/Base/201301/#level#/#col#/#row#.png", // 배경맵 서비스 예전버전 2013년
+    
+    "StreamSectionLayerId" : "51", // 하천단면 레이어 아이디
+    "StreamNetworkLayerId" : "52", // 하천망도 레이어 아이디
+    "reachFlowLayerId" : "53", // 리치흐름 레이어 아이디
+    "reachNodeLayerId" : "54", // 리치노드 레이어 아이디
+    "reachLineLayerId" : "55", // 리치라인 레이어 아이디
+    "reachAreaLayerId" : "56", // 집수구역 레이어 아이디
+    "admSidoLayerId" : "66", // 시/도 레이어 아이디
+    "admSigunguLayerId" : "67", // 시/군/구 레이어 아이디
+    "admDongLayerId" : "68", // 읍/면/동 레이어 아이디
+    "admRiLayerId" : "69", // 리 레이어 아이디
+    "areaWSLayerId" : "62", // 대권역 레이어 아이디
+    "areaAMLayerId" : "63", // 중권역 레이어 아이디
+    "areaASLayerId" : "64", // 소권역 레이어 아이디
+    "toLegend" : "71", // 식생도 레이어 아이디
+    "sicLegend" : "73", // 토지피복도 레이어 아이디
+    "LakeLayerId" : "77", // 토지피복도 레이어 아이디
+
+	"kradCatSearchId" : "21", // KRAD CAT_SEARCH
+	"kradCatExtMetaData" : "23", // KRAD METADATA
+	"kradCatExtDataInfo" : "27", // KRAD DATA_INFO
+	"siteInfoLayerId" : "93", // 레이어별 지점정보 레이어 아이디
+	"arcServiceUrl":"http://112.217.167.123:20002/arcgis",
+	"MapserviceUrl1" : "http://112.217.167.123:20002/arcgis/rest/services/drone_dev/MapServer",
+	"MapserviceUrlChlo" : "http://112.217.167.123:20002/arcgis/rest/services/Chlorophyll_a/MapServer",
+	"MapserviceUrlPhyco" : "http://112.217.167.123:20002/arcgis/rest/services/Phycocyanin/MapServer",
+	"MapserviceUrlAviation" : "http://112.217.167.123:20002/arcgis/rest/services/Aviation_image/MapServer",
+	"isOffsetPoint": true, // 포인트 찍을때 offset 적용 여부 (실서버 배포 시 false)
+	"kradMapservicUrl": "http://112.217.167.123:20002/arcgis/rest/services/KRAD/MapServer",
+	"featureLayerId":'3',
+	"paramInfo": [{ // 물환경 상세자료검색에서 넘기는 파라메터 정보
+		"stationType": "MA",
+		"layerId": "1",
+		"colName": "측정소코드",
+		"layerName": "하천수"
+	}, {
+		"stationType": "MB",
+		"layerId": "2",
+		"colName": "측정소코드",
+		"layerName": "호소수"
+	}, {
+		"stationType": "MD",
+		"layerId": "3",
+		"colName": "측정소코드",
+		"layerName": "농업용수"
+	}, {
+		"stationType": "ME",
+		"layerId": "4",
+		"colName": "측정소코드",
+		"layerName": "공단배수(예전명)/산단하천(최근명)"
+	}, {
+		"stationType": "MF",
+		"layerId": "5",
+		"colName": "측정소코드",
+		"layerName": "도시관류"
+	}, {
+		"stationType": "CA",
+		"layerId": "13",
+		"colName": "측정소코드",
+		"layerName": "퇴적물"
+	}, {
+		"stationType": "CB",
+		"layerId": "13",
+		"colName": "측정소코드",
+		"layerName": "퇴적물"
+	}, {
+		"stationType": "DA",
+		"layerId": "16",
+		"colName": "관측소코드",
+		"layerName": "우량관측소"
+	}, {
+		"stationType": "DB",
+		"layerId": "15",
+		"colName": "관측소코드",
+		"layerName": "수위관측소"
+	}, {
+		"stationType": "DC",
+		"layerId": "17",
+		"colName": "관측소코드",
+		"layerName": "유량관측소"
+	}, {
+		"stationType": "DD",
+		"layerId": "18",
+		"colName": "관측소코드",
+		"layerName": "댐관측소"
+	}, {
+		"stationType": "DE",
+		"layerId": "19",
+		"colName": "관측소코드",
+		"layerName": "AWS기상관측소"
+	}, {
+		"stationType": "DF",
+		"layerId": "20",
+		"colName": "관측소코드",
+		"layerName": "지상기상관측소"
+	}, {
+		"stationType": "DG",
+		"layerId": "21",
+		"colName": "PT_NO",
+		"layerName": "보관측소"
+	}, {
+		"stationType": "EA",
+		"layerId": "23",
+		"colName": "조사지코드",
+		"layerName": "수생태계전국단위"
+	}, {
+		"stationType": "FA",
+		"layerId": "31",
+		"colName": "시설코드",
+		"layerName": "농공단지처리시설"
+	}, {
+		"stationType": "FB",
+		"layerId": "28",
+		"colName": "시설코드",
+		"layerName": "분뇨처리시설"
+	}, {
+		"stationType": "FC",
+		"layerId": "27",
+		"colName": "시설코드",
+		"layerName": "산업폐수종말처리시설"
+	}, {
+		"stationType": "FD",
+		"layerId": "29",
+		"colName": "시설코드",
+		"layerName": "매립장침출수처리시설"
+	}, {
+		"stationType": "FE",
+		"layerId": "25",
+		"colName": "시설코드",
+		"layerName": "축산폐수공공처리시설"
+	}, {
+		"stationType": "FF",
+		"layerId": "30",
+		"colName": "시설코드",
+		"layerName": "마을하수도"
+	}, {
+		"stationType": "FG",
+		"layerId": "26",
+		"colName": "시설코드",
+		"layerName": "하수종말처리시설"
+	}]
+}]

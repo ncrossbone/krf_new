@@ -1,0 +1,17 @@
+[{
+			"TITLE": "수질 측정 지점",
+			"EVENT_TYPE": "point"
+	},{
+			"TITLE": "수질 자동 측정 지점",
+			"EVENT_TYPE": "point"
+	},{
+			"TITLE": "퇴적물 조사 지점",
+			"EVENT_TYPE": "point"		
+	},{
+			"TITLE": "기타 측정 지점",
+			"EVENT_TYPE": "point"
+	},{
+			"TITLE": "환경 기초 시설",
+			"EVENT_TYPE": "point"
+	}]
+
