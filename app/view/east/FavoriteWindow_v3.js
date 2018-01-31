@@ -7,7 +7,7 @@ Ext.define('krf_new.view.east.FavoriteWindow_v3', {
 	
 	title: '즐겨찾기',
 	
-	cls: 'khLee-window-panel-header khLee-x-window-default khLee-x-grid-locked ',
+//	cls: 'khLee-window-panel-header khLee-x-window-default khLee-x-grid-locked ',
 	//bodyStyle: 'border: 0px;',
 	
 	layout: {
