@@ -12,15 +12,14 @@ Ext.define('krf_new.Desktop.App', {
     
     requires: [
         'Ext.window.MessageBox',
-
         'Ext.ux.desktop.ShortcutModel',
-
         'Desktop.StatusBoardWindow',
-        'Desktop.SiteListWindow',
-        'Desktop.MapWindow',
-        'Desktop.SearchWindow',
-        'Desktop.ResultWindow',
-        'Desktop.SiteInfoChartWindow'
+        'Desktop.MapWindow'
+        
+//        'Desktop.SiteListWindow',
+//        'Desktop.SearchWindow',
+//        'Desktop.ResultWindow',
+//        'Desktop.SiteInfoChartWindow'
         
     ],
 
@@ -37,10 +36,10 @@ Ext.define('krf_new.Desktop.App', {
         return [
             new Desktop.StatusBoardWindow(),
             new Desktop.MapWindow(),
-            new Desktop.SearchWindow(),
-            new Desktop.SiteListWindow(),
-            new Desktop.ResultWindow(),
-            new Desktop.SiteInfoChartWindow()
+//            new Desktop.SearchWindow(),
+//            new Desktop.SiteListWindow(),
+//            new Desktop.ResultWindow(),
+//            new Desktop.SiteInfoChartWindow()
         ];
     },
 

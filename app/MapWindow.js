@@ -29,6 +29,12 @@ Ext.define('Desktop.MapWindow', {
         
         // Map 툴팁 위치 조정
         $KRF_APP.addListener($KRF_EVENT.SET_MAP_TOOLTIP_LOCATION, setTooltipXY, this);
+
+        // 지점 목록 window
+        $KRF_APP.addListener($KRF_EVENT.SHOW_SITE_LIST_WINDOW, this.showSiteListWindow, this);
+        $KRF_APP.addListener($KRF_EVENT.HIDE_SITE_LIST_WINDOW, this.hideSiteListWindow, this);
+        
+        $KRF_APP.addListener($KRF_EVENT.WEST_TAB_CHANGE, this.westTabChange, this);
     },
 
     createWindow : function(config){
@@ -441,6 +447,122 @@ Ext.define('Desktop.MapWindow', {
 				targetWindow.close();
 			}
 		}
+	},
+	// 지점 목록 창 띄우기
+	showSiteListWindow: function(param) {
+		if(param == null || param.searchText == null){
+			return;
+		}
+		// 검샋시 다른 더튼값 초기화
+		var cmbArea1 = Ext.getCmp("cmbArea1");
+		var cmbArea2 = Ext.getCmp("cmbArea2");
+		var cmbArea3 = Ext.getCmp("cmbArea3");
+		var cmbWater1 = Ext.getCmp("cmbWater1");
+		var cmbWater2 = Ext.getCmp("cmbWater2");
+		var cmbWater3 = Ext.getCmp("cmbWater3");
+		var txtSearch = Ext.getCmp("textSearchText");
+		
+		var textSearchText_Start = Ext.getCmp("textSearchText_Start");
+		var textSearchText_End = Ext.getCmp("textSearchText_End");
+
+		if (param.searchText == 'waterSearch') {// 수계검색시 행정구역 초기화
+			cmbArea1.setValue("");
+			cmbArea2.setValue("");
+			cmbArea3.setValue("");
+			txtSearch.setValue("");
+
+			textSearchText_Start.setValue("");
+			textSearchText_End.setValue("");
+		} else if (param.searchText == 'admSearch') {// 행정구역검색시 수계
+			// 초기화
+			cmbWater1.setValue("");
+			cmbWater2.setValue("");
+			cmbWater3.setValue("");
+			txtSearch.setValue("");
+			textSearchText_Start.setValue("");
+			textSearchText_End.setValue("");
+		} else if (param.searchText == "nameSearch") {// 명칭찾기시 수계 행정구역
+			// 초기화
+			cmbArea1.setValue("");
+			cmbArea2.setValue("");
+			cmbArea3.setValue("");
+			cmbWater1.setValue("");
+			cmbWater2.setValue("");
+			cmbWater3.setValue("");
+			textSearchText_Start.setValue("");
+			textSearchText_End.setValue("");
+		} else if(param.searchText == "SEnameSearch"){
+			cmbArea1.setValue("");
+			cmbArea2.setValue("");
+			cmbArea3.setValue("");
+			cmbWater1.setValue("");
+			cmbWater2.setValue("");
+			cmbWater3.setValue("");
+			txtSearch.setValue("");
+		} else {
+		}
+		
+//		var desktop = this.getDesktop();
+//		
+//		var siteListModule = this.getDesktopModule($KRF_WINS.KRF.SITE_LIST.id);
+//		
+//		var siteListWindow = siteListModule.createWindow({x:desktop.getWidth()-400,y:0, width:400});
+//		siteListWindow = siteListWindow.show();
+//		
+//		this.modeWindows.krf.push(siteListWindow);
+		
+		var siteListWindow = Ext.getCmp("siteListWindow");
+		if (siteListWindow == undefined){
+			siteListWindow = Ext.create('krf_new.view.east.SiteListWindow',{x:Ext.getCmp('center_container').getWidth() - 520, y:0});
+			Ext.getCmp('center_container').add(siteListWindow);
+		}	
+    	
+    	siteListWindow.show();
+    	
+		var store = null;
+		var treeCtl = Ext.getCmp("siteListTree");
+		
+		if(param.searchType == "krad"){
+			store = Ext.create('krf_new.store.east.KradListWindow');
+		} else{
+			store = Ext.create('krf_new.store.east.SiteListWindow',{
+				async:true
+			});
+		}
+		
+		if(param.searchText == "paramSearch"){
+			store.paramType = searchType;
+		}
+		store.searchType = param.searchText;
+		store.load();
+		treeCtl.setStore(store);
+
+		// 좌측 정보창 버튼 on
+		SetBtnOnOff("btnSiteListWindow", "on");
+	},
+	hideSiteListWindow: function(currCtl) {
+		var listWinCtl = Ext.getCmp("siteListWindow");
+		if (listWinCtl != undefined){
+			listWinCtl.close();
+		}
+		listWinCtl = Ext.getCmp("siteListWindow_reach");
+		if (listWinCtl != undefined){
+			listWinCtl.close();
+		}
+		// 좌측 정보창 버튼 off
+		SetBtnOnOff("btnSiteListWindow", "off");
+	},
+	westTabChange: function(btnOnOff) {
+		var tabIdx = 1;
+		var titleNm = '위치검색';
+		if(btnOnOff == 'on'){
+			tabIdx = 0;
+			titleNm = '주제도 선택';
+		}
+		
+		var westContents = Ext.getCmp("westContents");
+		westContents.setActiveItem(tabIdx);
+		Ext.getCmp('search-win').setTitle(titleNm);
 	}
 });
 
